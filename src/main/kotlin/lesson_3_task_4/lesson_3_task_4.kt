@@ -17,4 +17,5 @@ fun main() {
     val endPosition2 = readlnOrNull()
     val move2 = "2 игрок пошел с фигурой $piece2 из $startPosition2 в $endPosition2"
     println(move2)
+
 }
