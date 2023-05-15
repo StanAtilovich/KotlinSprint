@@ -1,7 +1,7 @@
 package lesson_3_task_4
 
 fun main() {
-    println("Игрок 1 начал свой ход с..(Введите фигуру) ")
+    println("Игрок 1 начал свой ход с..(Введите фигуру)")
     val piece = readlnOrNull()
     println("Введите с какой клетки начал 1 игрок с фигуры $piece")
     val startPosition = readlnOrNull()
