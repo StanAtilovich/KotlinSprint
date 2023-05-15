@@ -1,21 +1,14 @@
 package lesson_3_task_task_5
 
 fun main() {
-    println("Игрок 1 начал свой ход с..(Введите фигуру) ")
-    println("Игрок 1 начал свой ход с..(Введите фигуру)")
-    val piece = readlnOrNull()
-    println("Введите с какой клетки начал 1 игрок с фигуры $piece")
-    val startPosition = readlnOrNull()
-    println("Введите 1 игрок поставил фигуру $piece на ")
-    val endPosition = readlnOrNull()
-    val move = "1 игрок пошел с фигурой $piece из $startPosition в $endPosition\n"
-    println(move)
-    println("Игрок 2 начал свой ход с..(Введите фигуру) ")
-    val piece2 = readlnOrNull()
-    println("Введите с какой клетки начал 2 игрок с фигуры $piece2")
-    val startPosition2 = readlnOrNull()
-    println("Введите 2 игрок поставил фигуру $piece2 на ")
-    val endPosition2 = readlnOrNull()
-    val move2 = "2 игрок пошел с фигурой $piece2 из $startPosition2 в $endPosition2"
-    println(move2)
+    val data = "D2-D4;0" // здесь хранится строка, полученная от игрока
+
+    val parts = data.split(";") // разбиваем строку на составляющие
+    val move = parts[0] // первая составляющая - сам ход
+    val number = parts[1].toInt() // вторая составляющая - номер хода (переводим в целое число)
+
+    val from = move.substring(0, 2) // откуда сделан ход (берем первые два символа)
+    val to = move.substring(3, 5) // куда сделан ход (берем символы с 3 по 5)
+
+    println("Ход из $from в $to на $number-ом шаге") // выводим результат
 }
