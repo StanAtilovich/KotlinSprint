@@ -1,11 +1,22 @@
 package lesson_2_task_2
 
 fun main() {
-    val numberOfOrders = 75
-    val gratitude = "Thanks for $numberOfOrders shopping!"
-    println(gratitude)
-    val numberOfEmployees = 2000
-    println("количество работников в данный момент $numberOfEmployees")
-    val numberEmployeesNow = numberOfEmployees - 1
-    println("1 работник ушел, осталось $numberEmployeesNow")
+    val permanentEmployee = 50
+    val permanentEmployeeSalary = 30_000
+    val intern = 30
+    val internSalary = 20_000
+    val employee = permanentEmployee + intern
+
+
+    val allPermanentEmployeeSalary = permanentEmployee * permanentEmployeeSalary
+    println("Зарплата постоянных сотрудников: $allPermanentEmployeeSalary")
+
+    val allInternSalary = intern * internSalary
+    println("Зарплата интернов: $allInternSalary")
+
+    val salary = allPermanentEmployeeSalary + allInternSalary
+
+
+    val averageSalary = salary / employee
+    println("Зарплата сотрудника после прихода интернов: $averageSalary")
 }
